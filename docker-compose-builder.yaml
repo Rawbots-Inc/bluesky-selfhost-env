@@ -79,14 +79,14 @@ services:
 
 # debug for caddy>>> 
   test-wss:
-    image: fastapi:bookworm
+    image: itaru2622/fastapi:bookworm
     environment:
       - app=main:app
       - opts=--host 0.0.0.0 --port 8080
     working_dir: /opt/fastapi-samples/3catchall
 
   test-ws:
-    image: fastapi:bookworm
+    image: itaru2622/fastapi:bookworm
     environment:
       - app=main:app
       - opts=--host 0.0.0.0 --port 8080
@@ -95,7 +95,7 @@ services:
 # debug for caddy <<<
 # debug for bluesky with indigo subcmds >>>
   test-indigo:
-    image: bluesky-indigo-tools:${asof}
+    image: itaru2622/bluesky-indigo-tools:${asof}
     profiles: ['', 'indigo']
     build:
        context: ./repos/indigo/
@@ -160,7 +160,7 @@ services:
     restart: always
 
   opensearch:
-    image: bluesky-indigo-opensearch:${asof}
+    image: itaru2622/bluesky-indigo-opensearch:${asof}
     profiles: ['', 'indigo']
     build:
       context: ./repos/indigo/
@@ -195,7 +195,7 @@ services:
     restart: always
 
   plc:
-    image: bluesky-did-method-plc:${asof}
+    image: itaru2622/bluesky-did-method-plc:${asof}
     profiles: ['', 'did-method-plc']
     build:
       context: ./repos/did-method-plc/

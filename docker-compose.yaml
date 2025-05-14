@@ -182,7 +182,7 @@ services:
 
   plc:
 #   image: bluesky-did-method-plc:${asof}
-    image: bluesky-did-method-plc:latest
+    image: itaru2622/bluesky-did-method-plc:latest
     ports:
       - 2582:2582
     volumes:
