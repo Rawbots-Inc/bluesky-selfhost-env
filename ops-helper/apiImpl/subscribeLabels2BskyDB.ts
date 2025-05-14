@@ -22,12 +22,12 @@ import { Subscription } from '@atproto/xrpc-server'
 import { Database }     from '@atproto/bsky'
 import yargs            from 'yargs/yargs';
 
-const dom = process.env.DOMAIN ?? 'mysky.local.com'
+const dom = process.env.DOMAIN ?? 'repsky.unify.mx'
 
 // options to support any deployment.
 const opt = yargs(process.argv.slice(2)).options({
   endpoint:    { type: 'string', default: 'wss://ozone.' + dom },
-  bskyDBUrl:   { type: 'string', default: process.env.BSKY_DB_POSTGRES_URL   || 'postgres://pg:password@localhost/bsky', description: 'appview postgresDB URL'},
+  bskyDBUrl:   { type: 'string', default: process.env.BSKY_DB_POSTGRES_URL   || 'postgres://pg:password@database/bsky', description: 'appview postgresDB URL'},
   bskyDBSchema:{ type: 'string', default: process.env.BSKY_DB_POSTGRES_SCHEMA || 'bsky',                                     description: 'appview postgresDB Schema'},
   tls:         { type: 'string', default: '0',                                                                               description: 'ignore TLS verification(NODE_TLS_REJECT_UNAUTHORIZED)'},
 }).parseSync();

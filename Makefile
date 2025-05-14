@@ -2,7 +2,7 @@
 # starts: definitions, need to care in especial.
 
 # domain of self-hosting bluesky (care TLD, otherwise get failure, ie: NG=>mysky.local)
-DOMAIN ?=mysky.local.com
+DOMAIN ?=repsky.unify.mx
 
 # FQDN of your self hosting bsky components.  DO NOT CHANGE THOSE, FOR USUAL CASES.
 # CHANGING THESE WITHOUT UNDERSTANDING WHAT YOU DOING, GETTING TROUBLES.
@@ -10,7 +10,8 @@ DOMAIN ?=mysky.local.com
 # - it is strongly recommended that FQDNs should be renamed only if the components provided by the fediverse/integration partner.
 # - take care for avoiding confusion, you may need to change other codes according to your trial.
 
-bgsFQDN       ?=bgs.${DOMAIN}
+#bgsFQDN       ?=bgs.${DOMAIN}
+bgsFQDN       ?=bsky.network # Bluesky network
 bskyFQDN      ?=bsky.${DOMAIN}
 feedgenFQDN   ?=feed-generator.${DOMAIN}
 jetstreamFQDN ?=jetstream.${DOMAIN}
@@ -21,19 +22,23 @@ plcFQDN       ?=plc.${DOMAIN}
 publicApiFQDN ?=public.api.${DOMAIN}
 socialappFQDN ?=social-app.${DOMAIN}
 
+# Feed generator
+feedShortName ?=community
+
 # email address to get public-signed certs ("internal" for self-signed certs by caddy)
-EMAIL4CERTS ?=internal
+EMAIL4CERTS ?=rawbotsteam@gmail.com
 
 # mail account, which PDS wants.
-PDS_EMAIL_SMTP_URL ?= smtps://change:me@smtp.gmail.com
+PDS_EMAIL_SMTP_URL ?= smtps://resend:re_BMt8pqZt_BqXdiBkeHNGs9dmxmE29H3VA@smtp.resend.com:2465/
 
 # feed-generator account in bluesky to send posts ( last part may need to be equal to PDS_HOSTNAME)
-FEEDGEN_PUBLISHER_HANDLE ?=feedgen.${pdsFQDN}
-FEEDGEN_EMAIL ?=feedgen@example.com
+FEEDGEN_PUBLISHER_HANDLE ?=rsky-ai.bsky.social
+FEEDGEN_EMAIL ?=rawbotsteam@gmail.com
+FEEDGEN_PUBLISHER_PASSWORD ?=123456a@A
 
 # ozone account in bluesky for moderation
 OZONE_ADMIN_HANDLE ?=ozone-admin.${pdsFQDN}
-OZONE_ADMIN_EMAIL  ?=ozone-admin@example.com
+OZONE_ADMIN_EMAIL  ?=rawbotsteam@gmail.com
 
 # datetime to distinguish docker images and sources (date in %Y-%m-%d or 'latest' in docker image naming manner)
 asof ?=latest
@@ -92,7 +97,7 @@ gh_git ?=$(addsuffix :, git@github.com)
 origin_repo_bsky_prefix ?=${gh}bluesky-social/
 origin_repo_did_prefix  ?=${gh}did-method-plc/
 
-fork_repo_prefix ?=
+fork_repo_prefix ?=https://github.com/Rawbots-Inc/
 #fork_repo_prefix =${gh_git}itaru2622/bluesky-
 
 # default log level.

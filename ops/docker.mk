@@ -74,7 +74,7 @@ endif
 
 # execute publishFeed on feed-generator
 publishFeed:
-	DOMAIN=${DOMAIN} asof=${asof} docker_network=${docker_network} ${dockerCompose} -f ${f} exec feed-generator /app/scripts/publishFeed.exp ${FEEDGEN_PUBLISHER_HANDLE} "${FEEDGEN_PUBLISHER_PASSWORD}" https://${pdsFQDN} whats-alf
+	DOMAIN=${DOMAIN} asof=${asof} docker_network=${docker_network} ${dockerCompose} -f ${f} exec feed-generator /app/scripts/publishFeed.exp ${FEEDGEN_PUBLISHER_HANDLE} "${FEEDGEN_PUBLISHER_PASSWORD}" https://bsky.social ${feedShortName}
 
 # execute reload on caddy container
 reloadCaddy:
