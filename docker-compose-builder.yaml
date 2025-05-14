@@ -79,14 +79,14 @@ services:
 
 # debug for caddy>>> 
   test-wss:
-    image: fastapi:bookworm
+    image: itaru2622/fastapi:bookworm
     environment:
       - app=main:app
       - opts=--host 0.0.0.0 --port 8080
     working_dir: /opt/fastapi-samples/3catchall
 
   test-ws:
-    image: fastapi:bookworm
+    image: itaru2622/fastapi:bookworm
     environment:
       - app=main:app
       - opts=--host 0.0.0.0 --port 8080
@@ -95,7 +95,7 @@ services:
 # debug for caddy <<<
 # debug for bluesky with indigo subcmds >>>
   test-indigo:
-    image: bluesky-indigo-tools:${asof}
+    image: itaru2622/bluesky-indigo-tools:${asof}
     profiles: ['', 'indigo']
     build:
        context: ./repos/indigo/
@@ -160,7 +160,7 @@ services:
     restart: always
 
   opensearch:
-    image: bluesky-indigo-opensearch:${asof}
+    image: itaru2622/bluesky-indigo-opensearch:${asof}
     profiles: ['', 'indigo']
     build:
       context: ./repos/indigo/
@@ -195,7 +195,7 @@ services:
     restart: always
 
   plc:
-    image: bluesky-did-method-plc:${asof}
+    image: itaru2622/bluesky-did-method-plc:${asof}
     profiles: ['', 'did-method-plc']
     build:
       context: ./repos/did-method-plc/
@@ -230,7 +230,7 @@ services:
       - caddy
       
   pds:
-    image: bluesky-atproto-pds:${asof}
+    image: itaru2622/bluesky-atproto-pds:${asof}
     profiles: ['', 'atproto']
     build:
       context: ./repos/atproto/
@@ -291,7 +291,7 @@ services:
       - caddy
 
   bgs:
-    image: bluesky-indigo-bgs:${asof}
+    image: itaru2622/bluesky-indigo-bgs:${asof}
     profiles: ['', 'indigo']
     build:
       context: ./repos/indigo/
@@ -332,7 +332,7 @@ services:
 
   bsky:
     # appview(api)
-    image: bluesky-atproto-bsky:${asof}
+    image: itaru2622/bluesky-atproto-bsky:${asof}
     profiles: ['', 'atproto']
     build:
       context: ./repos/atproto/
@@ -394,8 +394,8 @@ services:
       - caddy
 
   social-app:
-    image: bluesky-social-app:${asof}
-    #image: bluesky-social-app:${asof}${DOMAIN}
+    image: itaru2622/bluesky-social-app:${asof}
+    #image: itaru2622/bluesky-social-app:${asof}${DOMAIN}
     profiles: ['', 'social-app']
     build:
       context: ./repos/social-app/
@@ -426,7 +426,7 @@ services:
 
 
   palomar:
-    image: bluesky-indigo-palomar:${asof}
+    image: itaru2622/bluesky-indigo-palomar:${asof}
     profiles: ['', 'indigo']
     build:
       context: ./repos/indigo/
@@ -463,7 +463,7 @@ services:
       - caddy
 
   jetstream:
-    image: bluesky-jetstream:${asof}
+    image: itaru2622/bluesky-jetstream:${asof}
     profiles: ['', 'jetstream']
     build:
       context: ./repos/jetstream/
@@ -492,7 +492,7 @@ services:
 
   ozone-standalone:
     # moderation-api:
-    image: bluesky-ozone:${asof}
+    image: itaru2622/bluesky-ozone:${asof}
     profiles: ['', 'ozone']
     build:
       context: ./repos/ozone/
@@ -549,7 +549,7 @@ services:
 
   ozone:
     # moderation-api:
-    image: bluesky-atproto-ozone:${asof}
+    image: itaru2622/bluesky-atproto-ozone:${asof}
     profiles: ['', 'atproto']
     build:
       context: ./repos/atproto/
@@ -599,7 +599,7 @@ services:
       - caddy
 
   ozone-daemon:
-    image: bluesky-atproto-ozone:${asof}
+    image: itaru2622/bluesky-atproto-ozone:${asof}
     profiles: ['', 'atproto']
     build:
       context: ./repos/atproto/
@@ -647,7 +647,7 @@ services:
       - caddy
 
   feed-generator:
-    image: bluesky-feed-generator:${asof}
+    image: itaru2622/bluesky-feed-generator:${asof}
     profiles: ['', 'feed-generator']
     build:
       context: ./repos/feed-generator/
