@@ -35,6 +35,7 @@ PDS_EMAIL_SMTP_URL ?= smtps://resend:re_BMt8pqZt_BqXdiBkeHNGs9dmxmE29H3VA@smtp.r
 FEEDGEN_PUBLISHER_HANDLE ?=rsky-ai.bsky.social
 FEEDGEN_EMAIL ?=rawbotsteam@gmail.com
 FEEDGEN_PUBLISHER_PASSWORD ?=123456a@A
+FEEDGEN_PUBLISHER_DID ?=did:plc:4ah7wr6kehwauzdftnfnprse
 
 # ozone account in bluesky for moderation
 OZONE_ADMIN_HANDLE ?=ozone-admin.${pdsFQDN}
