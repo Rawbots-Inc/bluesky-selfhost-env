@@ -647,7 +647,7 @@ services:
       - caddy
 
   feed-generator:
-    image: itaru2622/bluesky-feed-generator:${asof}
+    image: bluesky-feed-generator:${asof}
     profiles: ['', 'feed-generator']
     build:
       context: ./repos/feed-generator/

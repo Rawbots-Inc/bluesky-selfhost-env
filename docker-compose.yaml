@@ -545,7 +545,7 @@ services:
 
   feed-generator:
    #image: itaru2622/bluesky-feed-generator:${asof}
-    image: itaru2622/bluesky-feed-generator:latest
+    image: bluesky-feed-generator:latest
     ports:
       - 2586:3000
     environment:
