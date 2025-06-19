@@ -22,7 +22,7 @@ import { Subscription } from '@atproto/xrpc-server'
 import { Database }     from '@atproto/bsky'
 import yargs            from 'yargs/yargs';
 
-const dom = process.env.DOMAIN ?? 'repsky.unify.mx'
+const dom = process.env.DOMAIN ?? 'rsky.ai'
 
 // options to support any deployment.
 const opt = yargs(process.argv.slice(2)).options({

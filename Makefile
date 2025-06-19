@@ -2,7 +2,7 @@
 # starts: definitions, need to care in especial.
 
 # domain of self-hosting bluesky (care TLD, otherwise get failure, ie: NG=>mysky.local)
-DOMAIN ?=repsky.unify.mx
+DOMAIN ?=rsky.ai
 
 # FQDN of your self hosting bsky components.  DO NOT CHANGE THOSE, FOR USUAL CASES.
 # CHANGING THESE WITHOUT UNDERSTANDING WHAT YOU DOING, GETTING TROUBLES.
@@ -32,7 +32,7 @@ EMAIL4CERTS ?=rawbotsteam@gmail.com
 PDS_EMAIL_SMTP_URL ?= smtps://resend:re_BMt8pqZt_BqXdiBkeHNGs9dmxmE29H3VA@smtp.resend.com:2465/
 
 # feed-generator account in bluesky to send posts ( last part may need to be equal to PDS_HOSTNAME)
-FEEDGEN_PUBLISHER_HANDLE ?=rsky-ai.bsky.social
+FEEDGEN_PUBLISHER_HANDLE ?=rsky.ai
 FEEDGEN_EMAIL ?=rawbotsteam@gmail.com
 FEEDGEN_PUBLISHER_PASSWORD ?=123456a@A
 FEEDGEN_PUBLISHER_DID ?=did:plc:4ah7wr6kehwauzdftnfnprse
